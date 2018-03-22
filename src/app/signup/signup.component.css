@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .containerlogin{
+    margin:30px;
+    display: flex;
+   justify-content: center;
+   border:1px solid rgba(24, 43, 107, 0.1);
+   background-color:#343a40;
+   width:300px;
+  
+  }
+  h2{
+    display: flex;
+    justify-content: center;
+    color:white;
+  }
+  label{
+    color:white;
+  }
+  
+  p{
+    color:white;
+    font-size: 14px;
+  }

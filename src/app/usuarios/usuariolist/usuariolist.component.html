@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      Listado de Usuarios
+    </h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let usuario of usuarioList">
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellido}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.telefono}}</td>
+          <td>
+              <button class="btn" (click)="onEdit(usuario)">Editar</button>
+              <button class="btn btn-danger" (click)="onDelete(usuario.$key)">Eliminar</button>
+           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+/* *{
+    background: #343a40;
+ 
+}
+
+nav{
+    position: relative;
+    top:-20px;
+    border:1px solid #343a40;
+   
+}
+div{
+    background: #343a40;
+}
+
+
+nav ,h1{
+    
+    color:#fff;  
+    display: flex;
+    justify-content: center;
+   
+    
+}
+ul {
+    display:flex;
+    flex-direction:row;
+ 
+    
+   
+}
+
+
+span{
+    font-size: 30px;
+   
+  
+}
+
+li{
+padding-right: 60px;
+display: flex;
+justify-content:space-around;
+}
+
+ */
+
+
+ .view {
+    background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg")no-repeat center center;
+    background-size: cover;
+}
+

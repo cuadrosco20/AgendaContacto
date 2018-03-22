@@ -1,0 +1,65 @@
+<!-- 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav" >
+       <li ><a routerLink="/"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li ><a routerLink="/contacto"><span class="glyphicon glyphicon-user "></span><span class="glyphicon glyphicon-search"></span></a></li>
+      <li><a routerLink="/newcontacto"><span class="glyphicon glyphicon-user "></span><span class="glyphicon glyphicon-plus"></span></a></li>
+      <li><a routerLink="/mensaje"><span class="glyphicon glyphicon-comment" ></span></a></li>
+      <li><a routerLink="/notificacion"><span class="glyphicon glyphicon-globe" ></span></a></li>
+      <li><a  class="display-3"><span class="glyphicon glyphicon-log-in" ></span></a></li>
+      <!-- <li><a routerLink="/signup"><span class="glyphicon glyphicon-registration-mark"></span></a></li> -->
+      <!-- <li ><a routerLink="salir" (click)="onClickLogout"><span class="glyphicon glyphicon-off" ></span></a></li>
+    </ul>
+  </div>
+  </div>
+</nav> --> 
+
+
+
+<!--Main Navigation-->
+<div class="container">
+<header> 
+
+    <nav  class="navbar fixed-top navbar-expand-lg  bg-dark py-5">
+        <a class="navbar-brand text-white" href="#"><strong>AGENDA PERSONAL</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/principal" >HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/usuarios" >CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/usuario" >NUEVO CONTACTO</a>
+                
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="/" >MENSAJE</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#" >NOTIFICACION</a>
+                        </li>
+                        <li class="nav-item" *ngIf="!isLogin">
+                            <a class="nav-link" href="#" routerLink="/login" >LOGIN</a>
+                        </li>
+
+                        <li class="nav-item" *ngIf="isLogin">
+                                <a class="nav-link" href="#" routerLink="" (click)="onclickLogout()">LOGOUT</a>
+                            </li>
+            </ul>
+        </div>
+    </nav>
+
+</header>
+</div>
+<!--Main Navigation-->
+
+<!--Main Layout-->
+
+
