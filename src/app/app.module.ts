@@ -9,6 +9,7 @@ import {HttpModule} from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {AuthService} from './servicios/auth.service';
+import {ContactoService} from './servicios/contacto.service';
 import {environment} from '../environments/environment';
 import { AppComponent } from './app.component';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
@@ -28,12 +29,11 @@ import{MatButtonModule,
        import { SignupComponent } from './signup/signup.component';
        import { MenuComponent } from './menu/menu.component';
        import { PrincipalComponent } from './principal/principal.component';
-       import { UsuariosComponent } from './usuarios/usuarios.component';
-       import { UsuarioComponent } from './usuarios/usuario/usuario.component';
-       import {UsuarioListComponent} from './usuarios/usuariolist/usuariolist.component';
-       import { UsuarioService } from './servicios/usuario.service';
        import { ToastrModule } from 'ngx-toastr';
-       
+       import { ContactoComponent } from './contactos/contacto/contacto.component';
+       import { ContactosComponent } from './contactos/contactos.component';
+       import { ContactolistComponent } from './contactos/contactolist/contactolist.component';
+               
 
 
 
@@ -45,9 +45,9 @@ import{MatButtonModule,
           SignupComponent,
           MenuComponent,
           PrincipalComponent,
-          UsuariosComponent,
-          UsuarioComponent,
-          UsuarioListComponent
+          ContactoComponent,
+          ContactosComponent,
+          ContactolistComponent
    
          
        
@@ -77,7 +77,7 @@ import{MatButtonModule,
         
          
         ],
-        providers: [AuthService,UsuarioService],
+        providers: [AuthService,ContactoService],
         bootstrap: [AppComponent]
       })
        

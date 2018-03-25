@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      Listado de Contactos
+    </h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let contacto of contactoList">
+          <td>{{contacto.nombre}}</td>
+          <td>{{contacto.apellido}}</td>
+          <td>{{contacto.email}}</td>
+          <td>{{contacto.telefono}}</td>
+          <td>
+              <button class="btn" (click)="onEdit(contacto)">Editar</button>
+              <button class="btn btn-danger" (click)="onDelete(contacto.$key)">Eliminar</button>
+           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

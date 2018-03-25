@@ -4,10 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import{Router} from '@angular/router';
 import {MatInputModule} from '@angular/material/input';
 import {AuthService } from '../servicios/auth.service';
-import {UsuarioService} from '../servicios/usuario.service';
+import {ContactoService} from '../servicios/contacto.service';
 import {Http} from '@angular/http';
 import { NgIf } from '@angular/common';
 import { NgForm } from '@angular/forms';
+import { FirebaseDatabase } from '@firebase/database-types';
 
 
 @Component({
@@ -18,14 +19,14 @@ import { NgForm } from '@angular/forms';
 export class MenuComponent implements OnInit {
     
   public isLogin: boolean;
-  public nombreUsuario: string;
-  public emailUsuario: string;
-
+  public nombreContacto: string;
+  public emailContacto: string;
+ 
 
 
   constructor(
     public authService: AuthService,
-    public usuarioService : UsuarioService,
+    public contactoService : ContactoService,
     public router :Router
    
   ) { }  
@@ -36,12 +37,15 @@ export class MenuComponent implements OnInit {
     this.authService.getAuth().subscribe( auth => {
       if (auth) {
         this.isLogin = true;
-        this.nombreUsuario = auth.displayName;
-        this.emailUsuario = auth.email;
+         this.nombreContacto = auth.displayName;
+
+         this.emailContacto= auth.email;
         } else {
         this.isLogin = false;
       }
     });
+
+  
   }
 
    onclickLogout(){

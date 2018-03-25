@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import{AngularFireAuth} from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
@@ -8,34 +9,31 @@ import {  AngularFireAuthModule } from 'angularfire2/auth';
 import {FirebaseListObservable} from 'angularfire2/database-deprecated';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database-deprecated';
 import {AngularFireList} from 'angularfire2/database';
-import{Usuario} from '../models/usuario';
+import{Contacto} from '../models/contacto';
 import { Router } from '@angular/router';
-import { UsuarioService } from './usuario.service';
-
-
-
+import { ContactoService } from './contacto.service';
 
 @Injectable()
 export class AuthService {
 
-
- 
   constructor(
     private afAuth: AngularFireAuth,
-    private userService: UsuarioService
- 
+    private contactoService: ContactoService
 
-  )  { }
+  ) 
+   { }
 
 
   
   registraruser(email:string, pass:string){
     return new Promise((resolve, reject)=>{
       this.afAuth.auth.createUserWithEmailAndPassword(email, pass)
-      .then(userData => resolve(userData),
+      .then(userData=> resolve(userData),
        err=> reject(err));
     });
   }
+
+
 
 
   loginEmail(email:string, pass:string){
@@ -46,7 +44,9 @@ export class AuthService {
     });
   }
 getAuth(){
-  return this.afAuth.authState.map(auth => auth);
+
+
+  return this.afAuth.authState.map(auth => auth );
   
 }
 
@@ -54,6 +54,7 @@ getAuth(){
 logout(){
   return this.afAuth.auth.signOut();
 }
+
 
 }
 

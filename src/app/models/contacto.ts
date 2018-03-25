@@ -1,6 +1,5 @@
 
-
-export class Usuario {
+export class Contacto {
 
     $key: string;
     nombre: string;
@@ -10,4 +9,3 @@ export class Usuario {
  
    
 }
-

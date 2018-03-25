@@ -6,9 +6,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PrincipalComponent } from './principal/principal.component';
-import {UsuariosComponent} from './usuarios/usuarios.component';
-import {UsuarioComponent} from './usuarios/usuario/usuario.component';
-import {UsuarioListComponent} from './usuarios/usuariolist/usuariolist.component';
+import {ContactosComponent} from './contactos/contactos.component';
+import {ContactoComponent} from './contactos/contacto/contacto.component';
+import {ContactolistComponent} from './contactos/contactolist/contactolist.component';
 
 
 
@@ -20,9 +20,9 @@ import {UsuarioListComponent} from './usuarios/usuariolist/usuariolist.component
    {path:'login', component: LoginComponent},
    {path:'signup', component: SignupComponent},
    {path:'principal', component: PrincipalComponent},
-   {path:'usuarios', component: UsuariosComponent},
-   {path:'usuario', component: UsuarioComponent},
-   {path:'usuariolist', component: UsuarioListComponent}
+   {path:'contactos', component: ContactosComponent},
+   {path:'contacto', component: ContactoComponent},
+   {path:'contactolist', component: ContactolistComponent}
 
   ];
 
