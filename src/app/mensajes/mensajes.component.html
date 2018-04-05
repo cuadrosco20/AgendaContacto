@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">
+      Listado de mensajes
+    </h6>
+    <table class="table table-sm table-hover">
+      <thead>
+        <tr>
+          <th>Destinatario</th>
+          <th>Remitente</th>
+          <th>Mensaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let mensaje of mensajeList">
+          <td>{{mensaje.destinatario}}</td>
+          <td>{{mensaje.remitente}}</td>
+          <td>{{mensaje.texto}}</td>
+          <td>
+              <button class="btn" (click)="onEdit(mensaje)">Editar</button>
+              <button class="btn btn-danger" (click)="onDelete(mensaje.$key)">Eliminar</button>
+           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

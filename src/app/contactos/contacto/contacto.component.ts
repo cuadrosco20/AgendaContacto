@@ -17,6 +17,7 @@ import { ToastrService } from 'ngx-toastr';
 
 
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import * as firebase from 'firebase/app';
 
 
 @Component({
@@ -36,19 +37,23 @@ export class ContactoComponent implements OnInit {
 
   ngOnInit() {
     this.contactoService.getContactos();
+
     this.resetForm();
   }
 
   onSubmit(contactoForm: NgForm)
   {
-    if(contactoForm.value.$key == null)
+    let usuAct = firebase.auth().currentUser;
+    if(contactoForm.value.$key == null){
+      contactoForm.value.dname = usuAct.email; 
       this.contactoService.insertContacto(contactoForm.value);
-    else
+      console.log(contactoForm.value);}
+    else{
     this.contactoService.updateContacto(contactoForm.value);
     
     this.resetForm(contactoForm);
     this.toastr.success('Operación Exitosa', 'Contacto Registrado');
-  }
+  }}
 
   resetForm(contactoForm?: NgForm)
   {

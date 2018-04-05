@@ -33,6 +33,8 @@ import{MatButtonModule,
        import { ContactoComponent } from './contactos/contacto/contacto.component';
        import { ContactosComponent } from './contactos/contactos.component';
        import { ContactolistComponent } from './contactos/contactolist/contactolist.component';
+import { MensajesComponent } from './mensajes/mensajes.component';
+import { MensajeService } from './servicios/mensaje.service';
                
 
 
@@ -47,7 +49,8 @@ import{MatButtonModule,
           PrincipalComponent,
           ContactoComponent,
           ContactosComponent,
-          ContactolistComponent
+          ContactolistComponent,
+          MensajesComponent
    
          
        
@@ -77,7 +80,7 @@ import{MatButtonModule,
         
          
         ],
-        providers: [AuthService,ContactoService],
+        providers: [AuthService,ContactoService,MensajeService],
         bootstrap: [AppComponent]
       })
        

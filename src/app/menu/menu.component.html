@@ -23,15 +23,19 @@
                         <a class="nav-link" href="#" routerLink="/" >MENSAJE</a>
                     </li>
                     <li class="nav-item" *ngIf="isLogin" >
-                            <a class="nav-link" href="#" >NOTIFICACION</a>
+                            <a class="nav-link" href="#" routerLink="/notificacion" >NOTIFICACION</a>
                         </li>
                         <li class="nav-item" *ngIf="!isLogin">
                             <a class="nav-link" href="#" routerLink="/login" >LOGIN</a>
                         </li>
-
+                        <li class="nav-item" *ngIf="isLogin">
+                            <a class="nav-link" href="#" >{{emailUser}} </a>
+                        </li>
                         <li class="nav-item" *ngIf="isLogin">
                                 <a class="nav-link" href="#" routerLink="" (click)="onclickLogout()">LOGOUT</a>
                             </li>
+                           
+
             </ul>
         </div>
     </nav>

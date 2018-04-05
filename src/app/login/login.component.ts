@@ -5,32 +5,36 @@ import{Router} from '@angular/router';
 import {AuthService } from '../servicios/auth.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public email:string;
+
+
+  public email: string;
   public password:string;
  
-
   constructor(
     public authService: AuthService,
-    public router :Router 
+    public router :Router
+  
   ){}
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
     
-      
-  
-  
-  onSubmitLogin(){
-    this.authService.loginEmail(this.email ,this.password)
+
+
+   onSubmitLogin(){
+     this.authService.loginEmail(this.email ,this.password)
     .then( (res) =>{
-            this.router.navigate(['principal']);
-    }).catch( (err)=>{
+      this.router.navigate(['principal']);
+   }).catch( (err)=>{
       this.router.navigate(['signup']);
-    });
+     });
   }
 
 

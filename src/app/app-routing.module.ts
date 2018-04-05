@@ -9,7 +9,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import {ContactosComponent} from './contactos/contactos.component';
 import {ContactoComponent} from './contactos/contacto/contacto.component';
 import {ContactolistComponent} from './contactos/contactolist/contactolist.component';
-
+import {MensajesComponent} from './mensajes/mensajes.component';
 
 
 
@@ -22,8 +22,8 @@ import {ContactolistComponent} from './contactos/contactolist/contactolist.compo
    {path:'principal', component: PrincipalComponent},
    {path:'contactos', component: ContactosComponent},
    {path:'contacto', component: ContactoComponent},
-   {path:'contactolist', component: ContactolistComponent}
-
+   {path:'contactolist', component: ContactolistComponent},
+   {path:'notificacion', component: MensajesComponent}
   ];
 
 

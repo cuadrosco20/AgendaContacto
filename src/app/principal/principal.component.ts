@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {AngularFireAuthModule, AngularFireAuth} from 'angularfire2/auth'
 @Component({
   selector: 'principal',
   templateUrl: './principal.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private afAuth: AngularFireAuth,
+              ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+   
 
 }

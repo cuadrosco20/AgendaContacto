@@ -7,6 +7,8 @@ import { Contacto } from '../models/contacto';
 
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { AuthService } from './auth.service';
+import * as firebase from 'firebase/app';
 
 
 
@@ -15,22 +17,30 @@ export class ContactoService {
 
   contactoList: AngularFireList<any>;
   selectedContacto: Contacto = new Contacto();
-
-  constructor(private firebase: AngularFireDatabase) { }
+  
+  constructor(private afd: AngularFireDatabase) { }
 
 
   getContactos()
   {
-    return this.contactoList = this.firebase.list('contactos');
+    const usuAct = firebase.auth().currentUser.uid;
+    console.log(usuAct);
+    this.contactoList = this.afd.list('users/' + usuAct + '/contactos');
+    return this.contactoList;
+    
   }
 
+ 
+  
+  
   insertContacto(contacto: Contacto)
   {
     this.contactoList.push({
     nombre: contacto.nombre,
     apellido: contacto.apellido,
     email: contacto.email,
-    telefono:contacto.telefono
+    telefono:contacto.telefono,
+    dname:contacto.dname
     });
   }
 
@@ -40,7 +50,8 @@ export class ContactoService {
       nombre: contacto.nombre,
       apellido: contacto.apellido,
       email: contacto.email,
-      telefono:contacto.telefono
+      telefono:contacto.telefono,
+      dname:contacto.dname
     });
   }
 

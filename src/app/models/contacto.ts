@@ -6,6 +6,7 @@ export class Contacto {
     apellido: string;
     email: string;
     telefono:string;
+    dname:string;
  
    
 }

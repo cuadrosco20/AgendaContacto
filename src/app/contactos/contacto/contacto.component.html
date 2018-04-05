@@ -56,6 +56,14 @@
                 <i class="fas fa-sync-alt"></i> Reset
             </button>
           </div>
+          <div>
+            <input 
+              type="hidden"
+              name="dname"
+              #dname="ngModel"
+              [(ngModel)]=contactoService.selectedContacto.dname
+              >
+          </div> 
         </form>
   </div>
 </div>

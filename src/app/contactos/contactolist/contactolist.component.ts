@@ -34,7 +34,7 @@ export class ContactolistComponent implements OnInit {
     return this.contactoService.getContactos()
       .snapshotChanges().subscribe(item => {
         this.contactoList = [];
-        item.forEach(element => {
+          item.forEach(element => {
           let x = element.payload.toJSON();
           x["$key"] = element.key;
           this.contactoList.push(x as Contacto);

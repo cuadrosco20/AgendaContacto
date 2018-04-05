@@ -17,10 +17,13 @@ import { FirebaseDatabase } from '@firebase/database-types';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  // public islogin:boolean= true;
+
     
   public isLogin: boolean;
-  public nombreContacto: string;
-  public emailContacto: string;
+  public nombreUser: string;
+  public emailUser: string;
+
  
 
 
@@ -35,22 +38,23 @@ export class MenuComponent implements OnInit {
   
   {
     this.authService.getAuth().subscribe( auth => {
-      if (auth) {
+      if (auth ) {
+       
         this.isLogin = true;
-         this.nombreContacto = auth.displayName;
-
-         this.emailContacto= auth.email;
-        } else {
+         this.nombreUser = auth.displayName;
+         this.emailUser= auth.email;
+        
+        
+      } else {
         this.isLogin = false;
-      }
+       
+        }
     });
-
-  
   }
 
-   onclickLogout(){
-     this.authService.logout();
-   } 
+    onclickLogout(){
+      this.authService.logout();
+    } 
 
 
   }
