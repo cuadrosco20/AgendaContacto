@@ -1,4 +1,9 @@
 
+
+
+
+
+<!-- 
 <div class="container">
 <header> 
 
@@ -41,9 +46,76 @@
     </nav>
 
 </header>
-</div>
-<!--Main Navigation-->
+</div>   -->
 
-<!--Main Layout-->
 
+<div class="container-overview">
+
+<div class="mdl-layout--small-screen-only">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+       
+      <!-- Title -->
+      <span class="mdl-layout-title  ">agend</span> <span class="mdl-layout-title  " style="color: black;font-weight: bold;">App</span>
+
+      <!-- Add spacer, to align navigation to the right -->
+    <div class="mdl-layout-spacer "></div>
+      <!-- Navigation. We hide it in small screens. -->
+       <nav class="mdl-navigation mdl-layout--large-screen-only">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <!-- <a class="nav-link" *ngIf="!isLogin"   href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a> -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isLogin" routerLink="/contacto" href="#">Nuevo Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isLogin" routerLink="/contactos"  href="#">Contacto</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" *ngIf="isLogin"   href="#">Editar Contacto</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isLogin" routerLink="/mensajes"  href="#">Mensajes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="isLogin" routerLink="/notificacion"  href="#">Notificacion</a>
+            </li>
+          </ul>
+
+  <div class="item" fxLayout="row" fxLayoutAlign="center" routerLink="/pages/profile" mat-ripple>
+          
+    <mat-icon class="icon" fxLayoutAlign="center"  *ngIf="isLogin" >account_circle</mat-icon>
+    <span> <p class="items"  *ngIf="isLogin">{{emailUser}} <i class="fa fa-angle-down" *ngIf="isLogin" aria-hidden="true"></i></p>
+   </span>
+   </div>
+
+   <button id="demo-menu-lower-right"
+   class="mdl-button mdl-js-button mdl-button--icon">
+<i class="material-icons">more_vert</i>
+<!-- <img src="..." alt="..." class="img-fluid rounded-circle z-depth-2"> -->
+
+</button> 
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+for="demo-menu-lower-right">
+         
+        <li class="mdl-menu__item" *ngIf="!isLogin"  routerLink="/signup" >Registrate</li>
+        <li class="mdl-menu__item" *ngIf="!isLogin"  routerLink="/login" >Iniciar</li>
+        <li class="mdl-menu__item" *ngIf="isLogin"   routerLink="/principal">Configuración</li>
+        <li class="mdl-menu__item" *ngIf="isLogin"   routerLink="/salida"  (click)="onclickLogout()">Salir</li> 
+       
+        </ul>
+         </nav> 
+    </div>
+  </header>
+  
+
+  </div>
+ </div>
+ 
+
+    
 

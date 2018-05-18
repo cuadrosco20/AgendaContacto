@@ -33,10 +33,11 @@ import{MatButtonModule,
        import { ContactoComponent } from './contactos/contacto/contacto.component';
        import { ContactosComponent } from './contactos/contactos.component';
        import { ContactolistComponent } from './contactos/contactolist/contactolist.component';
-import { MensajesComponent } from './mensajes/mensajes.component';
-import { MensajeService } from './servicios/mensaje.service';
-               
-
+       import { MensajesComponent } from './mensajes/mensajes.component';
+       import { MensajeService } from './servicios/mensaje.service';
+       import { HomeComponent } from './home/home.component';
+import { SalidaComponent } from './salida/salida.component';             
+        
 
 
        @NgModule({
@@ -50,8 +51,9 @@ import { MensajeService } from './servicios/mensaje.service';
           ContactoComponent,
           ContactosComponent,
           ContactolistComponent,
-          MensajesComponent
-   
+          MensajesComponent,
+          HomeComponent,
+          SalidaComponent
          
        
           
@@ -74,6 +76,7 @@ import { MensajeService } from './servicios/mensaje.service';
           AngularFireAuthModule,
           AppRoutingModule,
           AngularFireDatabaseModule,
+     
           ToastrModule.forRoot(),
         
           

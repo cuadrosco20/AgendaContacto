@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
    onSubmitLogin(){
      this.authService.loginEmail(this.email ,this.password)
     .then( (res) =>{
-      this.router.navigate(['principal']);
+      this.router.navigate(['home']);
    }).catch( (err)=>{
       this.router.navigate(['signup']);
      });

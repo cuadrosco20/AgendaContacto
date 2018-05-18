@@ -1,7 +1,6 @@
 
-p{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    padding: 60px;
+button{
+    position: relative;
+    left:200px;
 }
+

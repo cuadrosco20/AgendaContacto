@@ -1,6 +1,11 @@
+
+
+
+<!-- 
+
 <div class="container">
-  <fieldset>
-      <legend>Contacto</legend>
+  
+      <p>Contacto</p>
 <div class="card mt-5">
   <div class="card-header">
       <form #contactoForm="ngForm" (ngSubmit)="onSubmit(contactoForm)">
@@ -67,6 +72,75 @@
         </form>
   </div>
 </div>
-</fieldset>
+
+</div>  
+
+  -->
+
+
+
+
+ <!-- Material input -->
+    <div class="container" >
+
+ <form #contactoForm="ngForm" (ngSubmit)="onSubmit(contactoForm)">
+    <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="contactoService.selectedContacto.$key">
+
+<div class="md-form">
+    <label for="nombre" >Nombre</label>
+    <input type="text" id="nombre" class="form-control " 
+    name="nombre"
+    #nombre="ngModel"
+    [(ngModel)]="contactoService.selectedContacto.nombre" 
+    >
+
+</div>
+<div class="md-form">
+    <label for="apellido" >Apellido</label>
+  <input type="text" id="apellido" class="form-control"  
+  name="apellido"
+  #apellido="ngModel"
+  [(ngModel)]="contactoService.selectedContacto.apellido" >
+  
+</div>
+<div class="md-form">
+  <label for="email" >Email</label>
+  
+  <input type="text" id="email" class="form-control"
+  name="email"
+  #email="ngModel"
+  [(ngModel)]="contactoService.selectedContacto.email" >
+ 
+</div>
+<div class="md-form">
+    <label for="telefono" >Telefono</label>
+  <input type="text" id="form1" class="form-control"  
+  name="telefono"
+  #telefono="ngModel"
+  [(ngModel)]="contactoService.selectedContacto.telefono" >
+  
 </div>
 
+
+<div class="md-form">
+    <button type="submit" class="btn btn-info " >
+        <i class="fas fa-plus-circle"></i>Registrar
+    </button>
+   
+    
+    <button class="btn btn-blue-grey waves-light" type="reset" (click)="resetForm(contactoForm)">
+        <i class="fas fa-sync-alt"></i> Reset
+    </button>
+  </div>
+
+  <div>
+      <input 
+        type="hidden"
+        name="dname"
+        #dname="ngModel"
+        [(ngModel)]=contactoService.selectedContacto.dname>
+</div>
+
+</form>
+</div> 
+ 

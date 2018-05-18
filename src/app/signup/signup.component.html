@@ -1,11 +1,10 @@
-<div class="container">
+<!-- <div class="container">
     <div class="containerlogin ">
         <form (submit)="onSubmitAddUser()" >
         <div class="form-group">
           <h2>SIGN UP</h2>
           <br>
-           <!-- <label for="usuario">Usuario</label>  
-          <input type="text" class="form-control" id="usuario" [(ngModel)]="usuario" placeholder="Nombre"> --> -->
+         
           <br>
           <label for="email">Correo</label>
           <input type="email" name= "email" class="form-control" id="email" [(ngModel)]="email" aria-describedby="emailHelp" placeholder="Email">
@@ -21,4 +20,76 @@
          
       </form>
       </div>
-      </div>
+      </div> -->
+
+      <form (submit)="onSubmitAddUser()" >
+      <div class="container">
+                      
+          <section class="form-gradient">
+          
+              <!--Form with header-->
+              <div class="card">
+          
+                  <!--Header-->
+                  <div class="header pt-3 peach-gradient">
+          
+                      <div class="row d-flex justify-content-center">
+                        <div class="head">Sign Up</div> 
+                      </div>
+          
+                      <div class="row mt-2 mb-3 d-flex justify-content-center">
+               
+                            <a class="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-square"  > </i></a>
+                          
+                            <a class="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter-square "> </i></a>
+                          
+                            <a class="fa-lg p-2 m-2 gplus-ic"><i class="fab fa-google-plus-square " > </i></a>
+                        </div>
+          
+                  </div>
+                  <!--Header-->
+          
+                  <div class="card-body mx-4 mt-4">
+          
+                      <!--Body-->
+                      <div class="md-form">
+                          <input type="text"  class="form-control"  name= "email" id="materialFormLoginEmailEx"  [(ngModel)]="email" aria-describedby="emailHelp"> 
+                          <label for="Form-email3"><i class="fas fa-at"></i></label>
+                      </div>
+          
+                      <div class="md-form pb-1 pb-md-3">
+                          <input type="password"  class="form-control" name= "password" id="materialFormLoginPasswordEx" [(ngModel)]="password" >
+                          <label for="Form-pass3"> <i class="fas fa-lock"></i></label>
+                          <p class="font-small grey-text d-flex justify-content-end">Forgot <a href="#" class="dark-grey-text ml-1 font-weight-bold"> Password?</a></p>
+                      </div>
+          
+          
+                      <!--Grid row-->
+                      <div class="row d-flex align-items-center mb-4">
+          
+                          <!--Grid column-->
+                          <div class="col-md-1 col-md-5 d-flex align-items-start">
+                              <div class="text-center">
+                                  
+                                  <button type="submit"  class="mdl-button mdl-button--fab mdl-js-button mdl-js-ripple-effect" >
+                                  <i class="material-icons">send</i></button>
+
+                              </div>
+                          </div>
+                          <!--Grid column-->
+          
+                          <!--Grid column-->
+                          <div class="col-md-7">
+                              <p class="font-small grey-text d-flex justify-content-end mt-3">Don't have an account? <a href="#" class="dark-grey-text ml-1 font-weight-bold"> Sign up</a></p>
+                          </div>
+                          <!--Grid column-->
+          
+                      </div>
+                      <!--Grid row-->
+                  </div>
+          
+              </div>
+              <!--/Form with header-->
+              </section>
+              </div>
+              </form>

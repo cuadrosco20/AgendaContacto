@@ -1,9 +1,11 @@
-<div class="card">
-  <div class="card-body">
+
+<div class="container">
+<div class="md-form">
+  <div class="md-form">
     <h6 class="text-center">
       Listado de mensajes
     </h6>
-    <table class="table table-sm table-hover">
+    <table class="mdl-data-table mdl-js-data-table">
       <thead>
         <tr>
           <th>Destinatario</th>
@@ -13,11 +15,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let mensaje of mensajeList">
-          <td>{{mensaje.destinatario}}</td>
-          <td>{{mensaje.remitente}}</td>
-          <td>{{mensaje.texto}}</td>
-          <td>
-              <button class="btn" (click)="onEdit(mensaje)">Editar</button>
+          <td class="mdl-data-table__cell--non-numeric">{{mensaje.destinatario}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{mensaje.remitente}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{mensaje.texto}}</td>
+          <td class="mdl-data-table__cell--non-numeric">
+              <button class="btn btn-blue-grey waves-light" mdbWavesEffect (click)="onEdit(mensaje)">Editar</button>
               <button class="btn btn-danger" (click)="onDelete(mensaje.$key)">Eliminar</button>
            
           </td>
@@ -25,4 +27,5 @@
       </tbody>
     </table>
   </div>
+</div>
 </div>

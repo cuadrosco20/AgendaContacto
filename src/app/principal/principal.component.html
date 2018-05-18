@@ -1,7 +1,56 @@
 
-                        
+                     
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout"   >
+        <!-- <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">  -->
+          <div class="mdl-layout" *ngIf="isLogin" >
+            <span class="mdl-layout-title">Home</span>
+           
+           
+           
+          </div>
+        <!-- </header> -->
+        <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50" *ngIf="isLogin"  >
+          <!-- <header class="demo-drawer-header"> -->
 
-<p>Bienvenidos...! ya pueden acceder a nuestro servicio</p>
 
+           
+            <div class="demo-avatar-dropdown" >
+               
+                    <span class="nav-link" href="#" >{{emailUser}} </span>
+            
+                    <img src="../img/LOGO.png" alt="..." class="rounded-circle" style="width:40px;">  
+              <!-- <div class="mdl-layout-spacer"></div>  -->
+              <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon ">
+                <i class="material-icons" role="presentation" *ngIf="isLogin"   >arrow_drop_down</i>
+                <span class="visuallyhidden">Accounts</span>
+              </button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                <li class="mdl-menu__item" ><a>{{emailUser}}</a></li>
+                <li class="mdl-menu__item">info@example.com</li>
+                <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+              </ul>
+            </div>
+          <!-- </header> -->
+          <nav class="demo-navigation mdl-navigation mdl-color--blue-blue-800" *ngIf="isLogin" >
+            <a class="mdl-navigation__link" href="" routerLink="home"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+            <a class="mdl-navigation__link" href="" routerLink="contacto" > <i class="material-icons">
+                person_add
+                </i>    Nuevo Contacto</a>
+            <a class="mdl-navigation__link" href="" routerLink="contactolist"> <i class="material-icons">
+                account_box
+                </i> Lista de Contactos</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Promos</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Purchases</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Social</a>
+            <div class="mdl-layout-spacer"></div>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+          </nav>
+        </div>
+   
+      </div>
+  
 
-    
+  

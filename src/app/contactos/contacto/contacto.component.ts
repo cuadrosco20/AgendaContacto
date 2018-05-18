@@ -47,8 +47,8 @@ export class ContactoComponent implements OnInit {
     if(contactoForm.value.$key == null){
       contactoForm.value.dname = usuAct.email; 
       this.contactoService.insertContacto(contactoForm.value);
-      console.log(contactoForm.value);}
-    else{
+      console.log(contactoForm.value);
+    }else{
     this.contactoService.updateContacto(contactoForm.value);
     
     this.resetForm(contactoForm);

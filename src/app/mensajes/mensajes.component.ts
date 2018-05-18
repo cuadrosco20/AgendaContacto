@@ -11,6 +11,8 @@ import { MensajeService } from '../servicios/mensaje.service';
 // toastr
 import { ToastrService } from 'ngx-toastr';
 import { Mensaje } from '../models/mensajes';
+import { ContactoService } from '../servicios/contacto.service';
+
 
 @Component({
   selector: 'app-mensajes',
@@ -23,7 +25,7 @@ export class MensajesComponent implements OnInit {
 
 
   constructor(
-    
+    private ContactoService: ContactoService,
     private MensajesService: MensajeService,
     private toastr: ToastrService
   ) { }

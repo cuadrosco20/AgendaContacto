@@ -1,4 +1,4 @@
-.container{
+/* .container{
     display: flex;
     justify-content: center;
   }
@@ -24,4 +24,26 @@
   p{
     color:white;
     font-size: 14px;
+  } */
+
+
+  
+.container{
+  width: 500px;
+  height: auto;
+  background:#03a9f4;
+}
+
+
+.mdl-button{
+
+  background:#03a9f4;
+}
+
+.head{
+
+  font-size: 50px;
+  
   }
+
+  

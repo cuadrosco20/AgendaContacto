@@ -43,7 +43,7 @@ export class MenuComponent implements OnInit {
         this.isLogin = true;
          this.nombreUser = auth.displayName;
          this.emailUser= auth.email;
-        
+         
         
       } else {
         this.isLogin = false;
@@ -54,6 +54,7 @@ export class MenuComponent implements OnInit {
 
     onclickLogout(){
       this.authService.logout();
+    
     } 
 
 
